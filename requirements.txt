@@ -1,0 +1,10 @@
+pydantic>=2.7
+pypdf>=4.0
+pytest>=8.0
+deepagents
+langchain-core
+pandas>=2.0
+openpyxl>=3.1
+python-dotenv>=1.0
+# Model provider package is not pinned yet. Install the one you choose,
+# for example: pip install langchain-openai

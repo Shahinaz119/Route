@@ -1,0 +1,64 @@
+# ==============================
+# Secrets and environment variables
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Python virtual environments
+# ==============================
+.venv/
+venv/
+env/
+
+# ==============================
+# Python cache
+# ==============================
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ==============================
+# Company data - NEVER UPLOAD
+# ==============================
+data/
+datasets/
+company_data/
+company_dataset/
+raw_data/
+processed_data/
+uploads/
+
+# ==============================
+# Private datasets and documents
+# ==============================
+*.xlsx
+*.xls
+*.csv
+*.pdf
+*.docx
+*.npz
+*.jsonl
+
+# ==============================
+# Generated reports and logs
+# ==============================
+report*.json
+run_log.txt
+*.log
+
+# ==============================
+# IDE and operating system
+# ==============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Company branding/assets
+# ==============================
+assets/
