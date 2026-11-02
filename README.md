@@ -90,7 +90,7 @@ pip install langchain-openai
 
 ## Private data files
 
-The repository intentionally does not include `data/`, `assets/`, CVs, spreadsheets, embeddings, `.env`, or generated reports. These paths and file types are excluded by `.gitignore`; they must be supplied locally before running the application.
+The repository includes `data/roles_sample.json` as public example role definitions. Other files under `data/`, `assets/`, CVs, spreadsheets, embeddings, `.env`, and generated reports are excluded by `.gitignore` and must be supplied locally when needed. Do not commit real CVs, API credentials, private company catalogs, or generated reports to a public repository.
 
 The default app and CLI expect:
 
@@ -103,7 +103,7 @@ data/
 `-- CVs/                       Optional local CV files for testing
 ```
 
-The web app uses `data/roles_sample.json` and `data/courses.xlsx` relative to the project root. Do not commit real CVs, API credentials, private company catalogs, or generated reports to a public repository.
+The web app uses `data/roles_sample.json` and `data/courses.xlsx` relative to the project root. The role definitions are included in this repository; the catalog, tags, and embeddings are not.
 
 ## Configuration
 
@@ -194,7 +194,7 @@ The roles file is a JSON list. Each role has a unique `role_id`, a display `titl
     "role_id": "junior_ai_engineer",
     "title": "Junior AI Engineer",
     "requirements": [
-      {"skill": "python", "min_level": "beginner", "mandatory": true}
+      { "skill": "python", "min_level": "beginner", "mandatory": true }
     ]
   }
 ]

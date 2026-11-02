@@ -1,0 +1,89 @@
+[
+  {
+    "role_id": "data_analyst",
+    "title": "Data Analyst",
+    "source": "Based on common Data Analyst job requirements matched to EYOUTH catalog categories: AI & Data Science, Productivity",
+    "requirements": [
+      {"skill": "python", "min_level": "intermediate", "mandatory": true},
+      {"skill": "sql", "min_level": "intermediate", "mandatory": true},
+      {"skill": "data visualization", "min_level": "beginner", "mandatory": true},
+      {"skill": "excel", "min_level": "intermediate", "mandatory": true},
+      {"skill": "statistics", "min_level": "beginner", "mandatory": true},
+      {"skill": "power bi", "min_level": "beginner", "mandatory": false},
+      {"skill": "pandas", "min_level": "beginner", "mandatory": false},
+      {"skill": "communication", "min_level": "beginner", "mandatory": false}
+    ]
+  },
+  {
+    "role_id": "ai_engineer",
+    "title": "AI Engineer",
+    "source": "Based on common AI Engineer job requirements matched to EYOUTH catalog categories: AI & Data Science, Software Development",
+    "requirements": [
+      {"skill": "python", "min_level": "advanced", "mandatory": true},
+      {"skill": "machine learning", "min_level": "intermediate", "mandatory": true},
+      {"skill": "deep learning", "min_level": "beginner", "mandatory": true},
+      {"skill": "sql", "min_level": "beginner", "mandatory": true},
+      {"skill": "data analysis", "min_level": "intermediate", "mandatory": true},
+      {"skill": "large language models", "min_level": "beginner", "mandatory": false},
+      {"skill": "retrieval-augmented generation", "min_level": "beginner", "mandatory": false},
+      {"skill": "git", "min_level": "beginner", "mandatory": false}
+    ]
+  },
+  {
+    "role_id": "business_analyst",
+    "title": "Business Analyst",
+    "source": "Based on common Business Analyst job requirements matched to EYOUTH catalog categories: Business & Entrepreneurship, AI & Data Science, Productivity",
+    "requirements": [
+      {"skill": "excel", "min_level": "advanced", "mandatory": true},
+      {"skill": "data analysis", "min_level": "intermediate", "mandatory": true},
+      {"skill": "business writing", "min_level": "intermediate", "mandatory": true},
+      {"skill": "sql", "min_level": "beginner", "mandatory": true},
+      {"skill": "power bi", "min_level": "beginner", "mandatory": true},
+      {"skill": "project management", "min_level": "beginner", "mandatory": false},
+      {"skill": "communication", "min_level": "intermediate", "mandatory": false},
+      {"skill": "python", "min_level": "beginner", "mandatory": false}
+    ]
+  },
+  {
+    "role_id": "digital_marketer",
+    "title": "Digital Marketer",
+    "source": "Based on common Digital Marketing job requirements matched to EYOUTH catalog categories: Marketing, Sales & Business Development",
+    "requirements": [
+      {"skill": "social media marketing", "min_level": "intermediate", "mandatory": true},
+      {"skill": "content creation", "min_level": "intermediate", "mandatory": true},
+      {"skill": "seo", "min_level": "beginner", "mandatory": true},
+      {"skill": "google analytics", "min_level": "beginner", "mandatory": true},
+      {"skill": "email marketing", "min_level": "beginner", "mandatory": false},
+      {"skill": "copywriting", "min_level": "beginner", "mandatory": false},
+      {"skill": "data analysis", "min_level": "beginner", "mandatory": false}
+    ]
+  },
+  {
+    "role_id": "software_developer",
+    "title": "Software Developer",
+    "source": "Based on common Software Developer job requirements matched to EYOUTH catalog categories: Software Development, AI & Data Science",
+    "requirements": [
+      {"skill": "python", "min_level": "intermediate", "mandatory": true},
+      {"skill": "rest apis", "min_level": "intermediate", "mandatory": true},
+      {"skill": "git", "min_level": "intermediate", "mandatory": true},
+      {"skill": "sql", "min_level": "beginner", "mandatory": true},
+      {"skill": "javascript", "min_level": "beginner", "mandatory": false},
+      {"skill": "docker", "min_level": "beginner", "mandatory": false},
+      {"skill": "testing", "min_level": "beginner", "mandatory": false}
+    ]
+  },
+  {
+    "role_id": "hr_specialist",
+    "title": "HR Specialist",
+    "source": "Based on common HR Specialist job requirements matched to EYOUTH catalog categories: HR & People Management, Personal Development",
+    "requirements": [
+      {"skill": "recruitment", "min_level": "beginner", "mandatory": true},
+      {"skill": "performance management", "min_level": "beginner", "mandatory": true},
+      {"skill": "excel", "min_level": "intermediate", "mandatory": true},
+      {"skill": "communication", "min_level": "advanced", "mandatory": true},
+      {"skill": "labor law", "min_level": "beginner", "mandatory": false},
+      {"skill": "training and development", "min_level": "beginner", "mandatory": false},
+      {"skill": "data analysis", "min_level": "beginner", "mandatory": false}
+    ]
+  }
+]

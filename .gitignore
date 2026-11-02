@@ -24,7 +24,8 @@ __pycache__/
 # ==============================
 # Company data - NEVER UPLOAD
 # ==============================
-data/
+data/*
+!data/roles_sample.json
 datasets/
 company_data/
 company_dataset/
