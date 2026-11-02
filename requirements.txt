@@ -1,10 +1,14 @@
 pydantic>=2.7
 pypdf>=4.0
 pytest>=8.0
-deepagents
-langchain-core
+numpy>=1.26
 pandas>=2.0
 openpyxl>=3.1
+streamlit
+sentence-transformers
+langgraph
+langchain-google-genai
+langchain-openai
+deepagents
+langchain-core
 python-dotenv>=1.0
-# Model provider package is not pinned yet. Install the one you choose,
-# for example: pip install langchain-openai
