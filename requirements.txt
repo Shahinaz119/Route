@@ -12,3 +12,7 @@ langchain-openai
 deepagents
 langchain-core
 python-dotenv>=1.0
+gradio
+reportlab
+arabic-reshaper
+python-bidi

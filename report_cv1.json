@@ -1,0 +1,246 @@
+{
+  "role": "AI Engineer",
+  "candidate_skills": [
+    {
+      "name": "python",
+      "claimed_level": "intermediate",
+      "evidence": "demonstrated"
+    },
+    {
+      "name": "sql",
+      "claimed_level": "intermediate",
+      "evidence": "demonstrated"
+    },
+    {
+      "name": "pandas",
+      "claimed_level": "intermediate",
+      "evidence": "demonstrated"
+    },
+    {
+      "name": "power bi",
+      "claimed_level": "intermediate",
+      "evidence": "demonstrated"
+    }
+  ],
+  "gaps": [
+    {
+      "skill": "data analysis",
+      "required_level": "intermediate",
+      "current_level": "none",
+      "evidence": "none",
+      "mandatory": true,
+      "status": "missing",
+      "priority": 1
+    },
+    {
+      "skill": "machine learning",
+      "required_level": "intermediate",
+      "current_level": "none",
+      "evidence": "none",
+      "mandatory": true,
+      "status": "missing",
+      "priority": 2
+    },
+    {
+      "skill": "deep learning",
+      "required_level": "beginner",
+      "current_level": "none",
+      "evidence": "none",
+      "mandatory": true,
+      "status": "missing",
+      "priority": 3
+    },
+    {
+      "skill": "python",
+      "required_level": "advanced",
+      "current_level": "intermediate",
+      "evidence": "demonstrated",
+      "mandatory": true,
+      "status": "underdeveloped",
+      "priority": 4
+    },
+    {
+      "skill": "git",
+      "required_level": "beginner",
+      "current_level": "none",
+      "evidence": "none",
+      "mandatory": false,
+      "status": "missing",
+      "priority": 5
+    },
+    {
+      "skill": "large language models",
+      "required_level": "beginner",
+      "current_level": "none",
+      "evidence": "none",
+      "mandatory": false,
+      "status": "missing",
+      "priority": 6
+    },
+    {
+      "skill": "retrieval-augmented generation",
+      "required_level": "beginner",
+      "current_level": "none",
+      "evidence": "none",
+      "mandatory": false,
+      "status": "missing",
+      "priority": 7
+    }
+  ],
+  "unverified": [],
+  "roadmap": [
+    {
+      "slug": "coded-data-analysis",
+      "title": "Coded Data Analysis",
+      "title_ar": "تحليل البيانات المرمّزة",
+      "delivery_type": "recorded",
+      "covers": [
+        "large language models",
+        "python"
+      ],
+      "reason": "python (similarity: 0.462); large language models (similarity: 0.379)"
+    },
+    {
+      "slug": "machine-learning-diploma",
+      "title": "Machine Learning Diploma",
+      "title_ar": "دبلومة تعلّم الآلة",
+      "delivery_type": "live",
+      "covers": [
+        "python"
+      ],
+      "reason": "python (similarity: 0.429)"
+    },
+    {
+      "slug": "data-science-diploma",
+      "title": "Data Science Diploma",
+      "title_ar": "دبلومة علم البيانات",
+      "delivery_type": "live",
+      "covers": [
+        "python"
+      ],
+      "reason": "python (similarity: 0.383)"
+    },
+    {
+      "slug": "miscellaneous-ai-tools-apps-extentions",
+      "title": "Miscellaneous AI Tools, Apps & Extentions",
+      "title_ar": "أدوات وتطبيقات وملحقات الذكاء الاصطناعي المتنوعة",
+      "delivery_type": "recorded",
+      "covers": [
+        "large language models"
+      ],
+      "reason": "large language models (similarity: 0.432)"
+    },
+    {
+      "slug": "vibe-coding-the-art-of-ai-assisted-flow",
+      "title": "Vibe Coding: The Art of Ai-Assisted Flow",
+      "title_ar": "فايب كودينج: فن التدفق المدعوم بالذكاء الاصطناعي",
+      "delivery_type": "recorded",
+      "covers": [
+        "large language models"
+      ],
+      "reason": "large language models (similarity: 0.398)"
+    },
+    {
+      "slug": "the-communication-skills",
+      "title": "The Communication skills",
+      "title_ar": "مهارات الاتصال",
+      "delivery_type": "recorded",
+      "covers": [
+        "large language models"
+      ],
+      "reason": "large language models (similarity: 0.395)"
+    },
+    {
+      "slug": "coding-in-education",
+      "title": "Coding in Education",
+      "title_ar": "كتابة الأكواد في مجال التعليم",
+      "delivery_type": "recorded",
+      "covers": [
+        "large language models"
+      ],
+      "reason": "large language models (similarity: 0.392)"
+    },
+    {
+      "slug": "full-stack-data-analytics",
+      "title": "Full-Stack Data Analytics",
+      "title_ar": "دبلومة التحليل الشامل للبيانات",
+      "delivery_type": "hybrid",
+      "covers": [
+        "retrieval-augmented generation"
+      ],
+      "reason": "retrieval-augmented generation (similarity: 0.369)"
+    }
+  ],
+  "uncovered_gaps": [
+    "data analysis",
+    "machine learning",
+    "deep learning",
+    "git"
+  ],
+  "catalog": {
+    "total_rows": 272,
+    "published": 272,
+    "skipped_unpublished": 0,
+    "status_counts": {
+      "Published": 272
+    },
+    "invalid_rows": []
+  },
+  "summary": "تم تحليل سيرتك الذاتية ومقارنتها بالوظيفة المستهدفة.\nتم تحديد 7 فجوة مهارية تحتاج إلى تطوير.\nتم إدراج الكورسات المناسبة فقط عند توافر تطابق كافٍ مع المهارات المطلوبة.\nراجع المهارات غير المغطاة وضع لها خطة تعلم وممارسة عملية.\nيمكنك تقوية ملفك بإضافة مشروعات وأمثلة تثبت مستوى مهاراتك.",
+  "trace": [
+    {
+      "tool": "list_roles",
+      "detail": "6 roles"
+    },
+    {
+      "tool": "select_role",
+      "detail": "ai_engineer"
+    },
+    {
+      "tool": "read_cv",
+      "detail": "637 characters"
+    },
+    {
+      "tool": "submit_candidate_profile",
+      "detail": "4 grounded, 0 dropped"
+    },
+    {
+      "tool": "analyze_skill_gaps",
+      "detail": "7 gaps"
+    },
+    {
+      "tool": "search_catalog",
+      "detail": "5 results for: 'data analysis'"
+    },
+    {
+      "tool": "search_catalog",
+      "detail": "5 results for: 'machine learning'"
+    },
+    {
+      "tool": "search_catalog",
+      "detail": "5 results for: 'deep learning'"
+    },
+    {
+      "tool": "search_catalog",
+      "detail": "5 results for: 'python'"
+    },
+    {
+      "tool": "search_catalog",
+      "detail": "5 results for: 'git'"
+    },
+    {
+      "tool": "search_catalog",
+      "detail": "5 results for: 'large language models'"
+    },
+    {
+      "tool": "search_catalog",
+      "detail": "5 results for: 'retrieval-augmented generation'"
+    }
+  ],
+  "limitations": [
+    "Role requirements are placeholders until sourced from real job descriptions.",
+    "Course matching uses semantic similarity; a score below 0.35 may be a weak match.",
+    "Absence from a CV does not prove absence of a skill; it means the skill was not evidenced.",
+    "Unverified skills need demonstrated evidence before being considered demonstrated."
+  ]
+}

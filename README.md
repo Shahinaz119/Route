@@ -1,6 +1,6 @@
 # Smart Career Path Agent
 
-An AI-assisted career planning tool that compares a candidate's CV with a target role, identifies skill gaps, and recommends relevant courses from a course catalog. The project includes a Streamlit user interface, a LangGraph agent, deterministic validation logic, semantic course search, and offline tests.
+An AI-assisted career planning tool that compares a candidate's CV with a target role, identifies skill gaps, and recommends relevant courses from a course catalog. The project includes a Gradio user interface with downloadable PDF reports, a LangGraph agent, deterministic validation logic, semantic course search, and offline tests.
 
 ## Contents
 
@@ -29,14 +29,15 @@ An AI-assisted career planning tool that compares a candidate's CV with a target
 6. Course recommendations are checked against reviewed skill tags or exact skill phrases in course metadata.
 7. The agent produces a report with the candidate's skills, gaps, recommended courses, uncovered gaps, and an Arabic summary.
 
-The Streamlit app is the primary user experience. The LangGraph agent coordinates model calls and tools; deterministic Python code performs profile grounding, gap analysis, catalog validation, and recommendation checks.
+The Gradio app is the primary user experience. The LangGraph agent coordinates model calls and tools; deterministic Python code performs profile grounding, gap analysis, catalog validation, and recommendation checks.
 
 ## Project structure
 
 ```text
 .
 |-- src/
-|   |-- app.py                 Streamlit web interface
+|   |-- gradio_app.py          Gradio web interface
+|   |-- pdf_report.py          Arabic/English PDF report generation
 |   |-- deep_agent.py          LangGraph agent and CLI entry point
 |   |-- agent_tools.py         Agent tools, session state, and report validation
 |   |-- cv_extractor.py        CV reading, profile validation, and evidence grounding
@@ -52,6 +53,8 @@ The Streamlit app is the primary user experience. The LangGraph agent coordinate
 |   |-- config.py              Load project environment settings
 |   |-- llm_gemini.py          Gemini provider adapter
 |   `-- llm_openrouter.py      OpenRouter provider adapter
+|-- data/                      Public sample roles, test data, tags, and embeddings
+|-- assets/                    EYOUTH logo and Arabic report font
 |-- tests/
 |   |-- test_agent.py          Gap, matching, and CV-grounding tests
 |   `-- test_agent_tools.py    Agent-tool behavior tests
@@ -76,34 +79,25 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-The current `requirements.txt` does not yet list every application runtime package. Install the packages used by the app and agent:
-
-```powershell
-pip install streamlit sentence-transformers langgraph langchain-google-genai
-```
-
-For OpenRouter support, also install:
-
-```powershell
-pip install langchain-openai
-```
-
 ## Private data files
 
-The repository includes `data/roles_sample.json` as public example role definitions. Other files under `data/`, `assets/`, CVs, spreadsheets, embeddings, `.env`, and generated reports are excluded by `.gitignore` and must be supplied locally when needed. Do not commit real CVs, API credentials, private company catalogs, or generated reports to a public repository.
+The repository includes its sample role definitions, test JSON, course skill tags, catalog embeddings, report assets, and generated sample report/log. `.gitignore` excludes `.env`, `data/CVs/`, and `data/courses.xlsx`; virtual environments, caches, and IDE settings also remain local. The course workbook and CV files must be supplied privately to run a complete analysis. Do not commit API credentials or real candidate documents.
 
 The default app and CLI expect:
 
 ```text
 data/
 |-- roles_sample.json          Role definitions
-|-- courses.xlsx               Course catalog (or a supported JSON catalog for the CLI)
+|-- courses.xlsx               Local course catalog (not committed)
 |-- course_skill_tags.json     Course skill tags; reviewed tags can support recommendations
 |-- catalog_embeddings.npz     Precomputed course vectors and corresponding slugs
+|-- catalog_test.json          Small catalog fixture
+|-- ground_truth.json          Synthetic evaluation labels
+|-- profile.json               Example extracted candidate profile
 `-- CVs/                       Optional local CV files for testing
 ```
 
-The web app uses `data/roles_sample.json` and `data/courses.xlsx` relative to the project root. The role definitions are included in this repository; the catalog, tags, and embeddings are not.
+The Gradio app uses `data/roles_sample.json` and `data/courses.xlsx` relative to the project root. Role definitions, tags, and embeddings are committed; the course workbook and CV files are not. The EYOUTH logo and Arabic font under `assets/` support the interface and PDF report.
 
 ## Configuration
 
@@ -123,7 +117,7 @@ AGENT_MODEL=openrouter:openrouter/free
 OPENROUTER_API_KEY=replace_with_your_openrouter_api_key
 ```
 
-Use one provider configuration at a time. Never commit `.env` or paste a real key into source code, issues, or logs. The Streamlit app defaults to the Gemini model shown above when `AGENT_MODEL` is not set; the command-line agent requires `AGENT_MODEL` to be set.
+Use one provider configuration at a time. Never commit `.env` or paste a real key into source code, issues, or logs. The Gradio app and command-line agent require `AGENT_MODEL` to be set. For hosted deployment, add the provider key and model name through the hosting platform's secret settings.
 
 ## Build course embeddings
 
@@ -137,13 +131,13 @@ The default output is `data/catalog_embeddings.npz`. Rebuild it when the course 
 
 ## Run the web application
 
-With the required data files and provider configuration in place:
+With `data/courses.xlsx`, `data/catalog_embeddings.npz`, and provider configuration in place, start Gradio from the project root:
 
 ```powershell
-streamlit run src/app.py
+python -m src.gradio_app
 ```
 
-Choose a target role, upload a CV, and start the analysis. Reports can be downloaded from the results view. Run the command from the project root because the app's data paths are relative to that directory.
+Choose a target role, upload a CV, and start the analysis. The app creates a downloadable PDF report in `outputs/`. Run the command from the project root because the app's data paths are relative to that directory.
 
 ## Run from the command line
 
@@ -180,7 +174,7 @@ Run the offline unit tests from the project root:
 pytest
 ```
 
-`pytest.ini` configures pytest to collect tests from `tests/`. The unit tests use mocks for embeddings and do not require API keys or network access. The root-level `test_*.py` scripts are manual integration/search checks and are not included in the configured default test path; some require provider credentials or the private local data files.
+`pytest.ini` configures pytest to collect tests from `tests/`. The unit tests use mocks for embeddings and do not require API keys or network access.
 
 ## Data formats
 

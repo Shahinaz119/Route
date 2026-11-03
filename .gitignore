@@ -22,34 +22,10 @@ __pycache__/
 .ruff_cache/
 
 # ==============================
-# Company data - NEVER UPLOAD
+# User-requested private inputs
 # ==============================
-data/*
-!data/roles_sample.json
-datasets/
-company_data/
-company_dataset/
-raw_data/
-processed_data/
-uploads/
-
-# ==============================
-# Private datasets and documents
-# ==============================
-*.xlsx
-*.xls
-*.csv
-*.pdf
-*.docx
-*.npz
-*.jsonl
-
-# ==============================
-# Generated reports and logs
-# ==============================
-report*.json
-run_log.txt
-*.log
+/data/CVs/
+/data/courses.xlsx
 
 # ==============================
 # IDE and operating system
@@ -59,7 +35,5 @@ run_log.txt
 .DS_Store
 Thumbs.db
 
-# ==============================
-# Company branding/assets
-# ==============================
-assets/
+# End of local environment exclusions.
+

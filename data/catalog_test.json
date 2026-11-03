@@ -1,0 +1,11 @@
+[
+  {
+    "course_id": "TEST-SQL-1",
+    "title": "TEST course - SQL basics",
+    "delivery": "recorded",
+    "level": "beginner",
+    "duration_hours": 4,
+    "skills_covered": ["sql"],
+    "prerequisites": []
+  }
+]
